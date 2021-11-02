@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="game.js">
+        var bear;
+        var bees;
+        var updateTimer;
+        var lastStingTime;
+        var firstmove;
+    </script>
+    <noscript>
+        Warning - JavaScript is Disabled.
+        For full functionality of this page, it is necessary to enable JavaScript.
+    </noscript>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JavaScript and DOM API</title>
+    <link rel="stylesheet" type="text/css" href="game.css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <body onload="start();">
+
+        <div id="title">
+            <h1>Help the bear escape the bees !</h1>
+            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3" onchange="makeBees()"> bees by running and jumping. The objective is to have as less stings as possible!</p>
+            <p>You can adjust bears' speed <input type="text" id="speedBear" value="100" size="3"> px/ms</p>
+            <p>You can adjust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
+                <br><br> and the refresh period <input type="text" id="periodTimer" value="10" size="3"> ms </p>
+            <p>To restart the game press the Restart button -> <button onclick="restart()">RESTART</button></p>
+            <h2>Press left, right, up, down keys to move the bear</h2>
+
+        </div>
+        <div id="scores">
+            <table>
+                <tr>
+                    <td>
+                        <p>Stings: [<span id="hits">0</span>]</p>
+                    </td>
+                    <td>
+                        <p>Best duration: [<span id="duration">0</span>]</p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="board">
+            <img src="https://raw.githubusercontent.com/hbatatia/lab02-dom-resources/main/images/bear.gif" id="bear" alt="bear">
+            
+        </div>
+    </body>
+
+</html>
